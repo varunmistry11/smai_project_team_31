@@ -103,6 +103,8 @@ Then select one or several clips in the folder "Dataset".
 
 ## File Descriptions
 
+- `comparison_analysis.py` - Creates combined visualizations comparing both models across different experiments.
+
 ### Dataset Files
 
 - `download_data.py`: Script to download and extract the required dataset for training and evaluation.
@@ -113,12 +115,22 @@ Then select one or several clips in the folder "Dataset".
 - `train.py`: Training script for the CNN model with data loading, optimization, and evaluation.
 - `inference.py`: Script to run inference using the trained CNN model.
 - `utils.py`: Helper functions for data processing, transformations, and other utilities.
+- `model_evaluator.py`: Performs detailed analysis of the model's performance on different types of fouls.
+- `model_runner.py`: This script handles training, validation, and testing of the model.
+- `result_analyzer.py`: This script analyzes the inference results JSON file and calculates performance metrics
+by comparing predictions against ground truth data from annotations.json.
+- `visualization.py`: This script implements Grad-CAM for visualizing what regions in the input images are important for the model's decisions.
+- `evaluate_performance.py`: Evaluates the CNN model on multi-view vs. single-view, hierarchical vs. flat classification, and ablation studies.
 
 ### Transformer Model Files
 
 - `main.py`: Main entry point for training and evaluation of the transformer model.
 - `model.py`: Implementation of the transformer-based architecture with attention mechanisms.
 - `dataset.py`: Dataset loader and preprocessing functions specific to the transformer model.
+- `evaluate.py`: Computes and stores statistics and evaluation metrics.
+- `evaluate_performance.py`: Performs multi-view vs. single-view, hierarchical vs. flat classification, and ablation studies for the Transformer model.
+- `fusion_strategies.py`: Implements different fusion strategies for combining features from multiple views.
+- `mvit_model.py` - Defines the Multi-View Transformer model architecture with the ability to switch between fusion strategies.
 - `utils.py`: Utility functions for training, logging, and evaluation metrics.
 - `config.py`: Configuration parameters for the transformer model.
 
